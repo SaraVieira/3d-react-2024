@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
-import { MeshPhysicalMaterial, TextureLoader } from "three";
-import { useFrame, useLoader } from "@react-three/fiber";
+import { useGLTF, useTexture } from "@react-three/drei";
+import { MeshPhysicalMaterial } from "three";
+import { useFrame } from "@react-three/fiber";
 
 export function Case(props) {
   const { nodes, materials } = useGLTF("/psx.glb");
-  const texture = useLoader(TextureLoader, props.cover);
+  const texture = useTexture(props.cover);
   const coverMaterial = new MeshPhysicalMaterial({
     map: texture,
   });

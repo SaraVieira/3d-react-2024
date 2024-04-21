@@ -17,10 +17,7 @@ export const Scene = ({ cover }) => {
         rotation={[-Math.PI / 2, 0, 0]}
       />
       <FPSLimiter fps={30} />
-      <OrbitControls
-        maxAzimuthAngle={Math.PI / 8}
-        minAzimuthAngle={-Math.PI / 8}
-      />
+      <OrbitControls />
       <EffectComposer>
         <Pixelation granularity={5} />
       </EffectComposer>
