@@ -7,9 +7,10 @@ import { Separator } from "./ui/separator";
 export const Game = ({ selected }) => {
   return (
     <div className="flex flex-col w-full pt-12 relative">
-      <Canvas shadows>
+      {/* <Canvas shadows>
         <Scene cover={selected.cover} />
-      </Canvas>
+      </Canvas> */}
+      <img src={selected.cover} className="h-[400px] w-[400px]" />
       <h1 className="font-bold text-xl mt-8">{selected.title}</h1>
       <div className="flex h-5 items-center space-x-4 text-sm mb-2">
         <div>{selected.developer}</div>
