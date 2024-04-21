@@ -3,30 +3,12 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Scene } from "./Scene";
 import { Separator } from "./ui/separator";
-import { OrbitControls, Stats } from "@react-three/drei";
-import { BlendFunction } from "postprocessing";
-import {
-  Bloom,
-  DepthOfField,
-  EffectComposer,
-  Noise,
-  Pixelation,
-  Scanline,
-  Vignette,
-} from "@react-three/postprocessing";
 
 export const Game = ({ selected }) => {
   return (
     <div className="flex flex-col w-full pt-12 relative">
       <Canvas shadows>
-        <OrbitControls
-          maxAzimuthAngle={Math.PI / 8}
-          minAzimuthAngle={-Math.PI / 8}
-        />
         <Scene cover={selected.cover} />
-        <EffectComposer>
-          <Pixelation granularity={5} />
-        </EffectComposer>
       </Canvas>
       <h1 className="font-bold text-xl mt-8">{selected.title}</h1>
       <div className="flex h-5 items-center space-x-4 text-sm mb-2">
