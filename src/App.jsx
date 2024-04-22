@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div className="container flex gap-8 my-12">
+      <div className="container sm:flex gap-8 my-12">
         <Sidebar
           results={results || []}
           onChange={setTerm}
