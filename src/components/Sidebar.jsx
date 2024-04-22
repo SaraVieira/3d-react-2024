@@ -4,7 +4,7 @@ import { ScrollArea } from "./ui/scroll-area";
 
 export const Sidebar = ({ results, onChange, onSelected }) => {
   return (
-    <div className="w-[250px] shrink-0">
+    <div className="sm:w-[250px] shrink-0">
       <Input
         onChange={(e) => {
           onChange(e.target.value);
@@ -12,7 +12,7 @@ export const Sidebar = ({ results, onChange, onSelected }) => {
         className="mb-8"
         placeholder="Search for a game"
       />
-      <ScrollArea className="h-[81vh]">
+      <ScrollArea className="h-[30vh] sm:h-[81vh]">
         {results.count !== 0 ? (
           <ul>
             {results?.hits?.map((game) => (
